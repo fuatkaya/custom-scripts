@@ -1,0 +1,14 @@
+###### I would like to share with you the script code of an index that is effective in estimating yield.
+Using the RE-OSAVI, high accuracy coefficient was found (r2tillering = 0.629) for wheat yield at the tillering stage, whereas low accuracy coefficients were observed during the heading and ripening stages (0.412 and 0.333, respectively). 
+A correlation coefficient of 0.793 (P < 0.01) was observed between the wheat yields and RE-OSAVI values during the tillering period.
+Yield prediction studies.
+Dedeoğlu, M., Başayiğit, L., Yüksel, M. et al. Assessment of the vegetation indices on Sentinel-2A images for predicting the soil productivity potential in Bursa, Turkey. Environ Monit Assess 192, 16 (2020). https://doi.org/10.1007/s10661-019-7989-8
+####  İndices
+RE-OSAVI
+General Formula: RE−OSAVI=( 1+0.16 )×[(NIR-REedge)/(NIR+REedge+0.16)] 
+
+##code
+let L = 0.16;
+let index = (B08 - B04) / (B08 + B04 + L) * (1.0 + L); 
+return [index] #/ grayscale
+
